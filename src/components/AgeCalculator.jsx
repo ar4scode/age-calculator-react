@@ -1,5 +1,8 @@
 import {useFormik} from "formik"
 import * as Yup from "yup"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCircleDown } from "@fortawesome/free-solid-svg-icons";
+
 
 export default function AgeCalculator() {
 
@@ -22,9 +25,9 @@ export default function AgeCalculator() {
 
   const formik = useFormik({
     initialValues: {
-      day: 0,
-      month: 0,
-      year: 0
+      day: "",
+      month: "",
+      year: "",
     },
     validationSchema,
     onSubmit: (values) => {
@@ -80,6 +83,8 @@ export default function AgeCalculator() {
               <div style={{ color: "red" }}>{formik.errors.year}</div>
             ) : null}
           </div>
+
+          <button type="submit"><FontAwesomeIcon icon={faCircleDown} /></button>
         </form>
       </div>
     </>
