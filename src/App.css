@@ -17,11 +17,12 @@ body {
   background-color: #fff;
   border-radius: .5rem;
   margin: 2rem;
+  display: flex;
+  flex-direction: column;
 }
 
 .container form {
   display: flex;
-  margin: 1rem;
   padding: 1rem;
 }
 
@@ -64,4 +65,19 @@ form button:hover {
 form button:active {
   filter: grayscale(20%);
   opacity: .7;
+}
+
+.output-container {
+  text-align: center;
+  display: flex;
+}
+
+.output-container div h1 {
+  font-size: 4rem;
+  font-style: italic;
+  color: #000;
+}
+
+.output-container span {
+  color: #b753f1;
 }
