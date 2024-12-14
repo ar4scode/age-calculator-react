@@ -48,7 +48,7 @@ export default function AgeCalculator() {
       <div className="container">
         <form onSubmit={formik.handleSubmit}>
           <div className="input-containers">
-            <label style={formik.touched.month && formik.errors.month ? {color: "#e25858"} : null} htmlFor="day">DAY</label>
+            <label style={formik.touched.day && formik.errors.day ? {color: "#e25858"} : null} htmlFor="day">DAY</label>
             <input
               type="text"
               id="day"
@@ -57,7 +57,7 @@ export default function AgeCalculator() {
               onChange={formik.handleChange}
               onBlur={formik.handleBlur}
               placeholder="DD"
-              style={formik.touched.month && formik.errors.month ? {borderColor: "#e25858"} : null}
+              style={formik.touched.day && formik.errors.day ? {borderColor: "#e25858"} : null}
             />
             {formik.touched.day && formik.errors.day ? (
               <div style={errorStyle}>{formik.errors.day}</div>
@@ -80,7 +80,7 @@ export default function AgeCalculator() {
             ) : null}
           </div>
           <div className="input-containers">
-            <label style={formik.touched.month && formik.errors.month ? {color: "#e25858"} : null} htmlFor="year">YEAR</label>
+            <label style={formik.touched.year && formik.errors.year ? {color: "#e25858"} : null} htmlFor="year">YEAR</label>
             <input
               type="text"
               name="year"
@@ -89,7 +89,7 @@ export default function AgeCalculator() {
               onChange={formik.handleChange}
               onBlur={formik.handleBlur}
               placeholder="YYYY"
-              style={formik.touched.month && formik.errors.month ? {borderColor: "#e25858"} : null}
+              style={formik.touched.year && formik.errors.year ? {borderColor: "#e25858"} : null}
             />
             {formik.touched.year && formik.errors.year ? (
               <div style={errorStyle}>{formik.errors.year}</div>
