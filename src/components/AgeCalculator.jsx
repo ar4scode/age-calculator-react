@@ -33,6 +33,55 @@ export default function AgeCalculator() {
   })
   return(
     <> 
+      <div className="container">
+        <form onSubmit={formik.handleSubmit}>
+          <div>
+            <label htmlFor="day">DAY</label>
+            <input
+              type="text"
+              id="day"
+              name="day"
+              value={formik.values.day}
+              onChange={formik.handleChange}
+              onBlur={formik.handleBlur}
+              placeholder="DD"
+            />
+            {formik.touched.day && formik.errors.day ? (
+              <div style={{ color: "red" }}>{formik.errors.day}</div>
+            ) : null}
+          </div>
+          <div>
+            <label htmlFor="month">MONTH</label>
+            <input
+              type="text"
+              name="month"
+              id="month"
+              value={formik.values.month}
+              onChange={formik.handleChange}
+              onBlur={formik.handleBlur}
+              placeholder="MM"
+            />
+            {formik.touched.month && formik.errors.month ? (
+              <div style={{ color: "red" }}>{formik.errors.month}</div>
+            ) : null}
+          </div>
+          <div>
+            <label htmlFor="year">YEAR</label>
+            <input
+              type="text"
+              name="year"
+              id="year"
+              value={formik.values.year}
+              onChange={formik.handleChange}
+              onBlur={formik.handleBlur}
+              placeholder="YYYY"
+            />
+            {formik.touched.year && formik.errors.year ? (
+              <div style={{ color: "red" }}>{formik.errors.year}</div>
+            ) : null}
+          </div>
+        </form>
+      </div>
     </>
   )
 }
